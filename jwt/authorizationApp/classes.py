@@ -81,3 +81,15 @@ class AuthorizationException:
     def read(self):
         self.exceptionDesc = AuthorizationException.database[self.errorKey]["exceptionDesc"]
         return self
+    
+class RegisterUserRequest():
+    def __init__(self,username,password,scope,is_superuser):
+        self.username = username
+        self.password = password
+        self.scope = scope
+        self.is_superuser = is_superuser
+
+class RegisterUserResponse():
+    def __init__(self,exception,code):
+        self.code = code
+        self.message = exception.exceptionDesc
