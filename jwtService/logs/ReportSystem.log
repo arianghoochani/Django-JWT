@@ -1,0 +1,8 @@
+2024-01-17 12:29:31,603 DEBUG C:\Users\Arian\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py:630 - Using proactor: IocpProactor
+2024-01-17 12:29:37,590 DEBUG C:\Users\Arian\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py:630 - Using proactor: IocpProactor
+2024-01-17 12:29:44,258 INFO C:\Users\Arian\Desktop\testenv2\lib\site-packages\django\utils\autoreload.py:636 - Watching for file changes with StatReloader
+2024-01-17 12:29:50,068 WARNING C:\Users\Arian\Desktop\testenv2\lib\site-packages\django\utils\log.py:224 - Unauthorized: /jwt/login/
+2024-01-17 12:29:53,450 DEBUG C:\Users\Arian\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py:630 - Using proactor: IocpProactor
+2024-01-17 12:29:53,512 DEBUG C:\Users\Arian\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py:630 - Using proactor: IocpProactor
+2024-01-17 12:30:00,765 DEBUG C:\Users\Arian\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py:630 - Using proactor: IocpProactor
+2024-01-17 12:30:15,116 INFO C:\Users\Arian\Desktop\testenv2\lib\site-packages\django\utils\autoreload.py:636 - Watching for file changes with StatReloader
