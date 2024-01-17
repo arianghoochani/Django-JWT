@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,7 +84,44 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'jwt.wsgi.application'
 
+# Define a custom formatter
+class MyFormatter(logging.Formatter):
+    def format(self, record):
+        if not hasattr(record, 'location'):
+            caller = record.pathname.split('/')
+            filename = caller[-1]
+            record.location = f"{filename}:{record.lineno}"
+        return super().format(record)
+# Define the log file path
+LOGGING_DIR = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(LOGGING_DIR):
+    os.makedirs(LOGGING_DIR)
 
+LOG_FILE = '/app/logs/authorization.log'
+
+# Configure the logging handlers
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'my_formatter': {
+            '()': MyFormatter,
+            'format': '%(asctime)s %(levelname)s %(location)s - %(message)s',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': LOG_FILE,  # Specify the log file path here
+            'formatter': 'my_formatter',
+        },
+    },
+    'root': {
+        'handlers': ['file'],
+        'level': 'INFO',
+    },
+}
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
