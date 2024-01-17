@@ -1,0 +1,8 @@
+2024-01-17 12:08:11,855 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:668 - Watching for file changes with StatReloader
+2024-01-17 12:08:51,022 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:266 - C:\Users\Arian\Desktop\Django-JWT\jwt\authorizationApp\urls.py changed, reloading.
+2024-01-17 12:08:51,327 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:668 - Watching for file changes with StatReloader
+2024-01-17 12:08:53,524 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:266 - C:\Users\Arian\Desktop\Django-JWT\jwt\authorizationApp\urls.py changed, reloading.
+2024-01-17 12:08:53,837 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:668 - Watching for file changes with StatReloader
+2024-01-17 12:09:00,223 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:266 - C:\Users\Arian\Desktop\Django-JWT\jwt\authorizationApp\urls.py changed, reloading.
+2024-01-17 12:09:00,541 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:668 - Watching for file changes with StatReloader
+2024-01-17 12:09:15,819 INFO C:\Users\Arian\Desktop\testenv\lib\site-packages\django\utils\autoreload.py:668 - Watching for file changes with StatReloader
