@@ -29,4 +29,21 @@ In the next paragrtaphs I will give more details about mechanism, configuration 
 
 for more clearence in using authorization service sample of input and output of all 4 endpoints of our system are shown below in the postman respectively:
 
+### ***1-Login***
+This method recieves username and password as input and returns access and refresh token to the valid users. If username or password are not valid it returns authorization fail message.(username and password of this project are "admin", this user is added as SuperUser)
+
 ![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/login-method.png "login method")
+
+### ***2-Authorization***
+This method recieves the access token of the user with on the header as __BEARER__ token and returns successfull message if the token is valid.
+![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/authorizing-method.png "authorization method")
+
+### ***3-Refresh***
+This method recieves the refresh token in the body of request and if it is valid , returns new access token.
+
+![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/refresh-method.png "refresh method")
+
+### ***3-Register***
+This method register new users to the system, just pay attention that for registrering new user you should enter your access token as __BEARER__ token (the same as Authorization method), in addition only superusers have credentials to register a new user (admin user is superuser)
+
+![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/register-method.png "refresh method")
