@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.serializers import ValidationError 
 from .models import CustomUser
-from .classes import AuthorizationException,AuthorizingResponse
-from .serializers import AuthorizingResponseSerializer
+from .classes import AuthorizationException,RegisterUserResponse
+from .serializers import AuthorizingResponseSerializer,RegisterUserRequestSerializer,RegisterUserResponseSerializer
 from django.conf import settings
 import jwt
 import logging
