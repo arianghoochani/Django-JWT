@@ -1,28 +1,32 @@
 
+class AuthorizingResponse():
+    def __init__(self,user,exception):
+        self.status = "1"
+        self.description = exception.exceptionDesc
+        if user:
+            self.username = user.username
+            self.scope = user.scope
+        else:
+            self.username = ""
+            self.scope = ""
+
 class AuthorizationException:
     database = {
         "successful" :
         {
-            "exceptionCode" : "1",
             "exceptionDesc"	: "successful",
         },
         "username" :
         {
-            "exceptionCode" : "2",
             "exceptionDesc"	: "invalid or empty username",
-            "exceptionFarsiMsg"	: "نام کاربری نامعتبر یا خالی است"
         },
         "password" :
         {
-            "exceptionCode" : "3",
             "exceptionDesc"	: "invalid or empty password",
-            "exceptionFarsiMsg"	: "رمز عبور نامعتبر یا خالی است"
         },
         "user_not_found_error" :
         {
-            "exceptionCode" : "4",
             "exceptionDesc"	: "user is not found",
-            "exceptionFarsiMsg"	: "کاربری با این نام پیدا نشد"
         },
         "invalid_tokenType_error" :
         {
@@ -70,7 +74,7 @@ class AuthorizationException:
     }
         
 
-    def __init__(self, errorKey, exceptionCode="", exceptionDesc="", exceptionFarsiMsg=""):
+    def __init__(self, errorKey,  exceptionDesc="",):
         self.errorKey = errorKey
         self.exceptionDesc = exceptionDesc
 
