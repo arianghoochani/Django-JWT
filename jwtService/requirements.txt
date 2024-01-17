@@ -1,0 +1,10 @@
+asgiref==3.6.0
+cx-Oracle==8.3.0
+Django==3.2
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
+PyJWT==2.6.0
+pytz==2023.3
+sqlparse==0.4.3
+gunicorn==20.1.0
+python-dotenv==0.19.1

@@ -97,7 +97,7 @@ LOGGING_DIR = os.path.join(BASE_DIR, 'logs')
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
 
-LOG_FILE = 'logs\ReportSystem.log'
+LOG_FILE = '/app/logs/ReportSystem.log'
 
 # Configure the logging handlers
 LOGGING = {

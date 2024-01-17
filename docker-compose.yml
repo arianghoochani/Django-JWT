@@ -1,0 +1,20 @@
+
+version : '3'
+services :
+  authorizationdjango:
+    build:
+      context: ./jwtService
+    command: gunicorn djangoJwt.wsgi --bind 0.0.0.0:8000
+    volumes:
+      - ./logs:/app/logs
+    ports: 
+      - "8000:8000"
+    restart: always
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - authorizationdjango
+    restart: always
+
