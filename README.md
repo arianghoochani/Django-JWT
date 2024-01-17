@@ -43,7 +43,7 @@ This method recieves the refresh token in the body of request and if it is valid
 
 ![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/refresh-method.png "refresh method")
 
-### ***3-Register***
+### ***4-Register***
 This method register new users to the system, just pay attention that for registrering new user you should enter your access token as __BEARER__ token (the same as Authorization method), in addition only superusers have credentials to register a new user (admin user is superuser)
 
 ![alt text](https://github.com/arianghoochani/Django-JWT/blob/main/register-method.png "refresh method")
