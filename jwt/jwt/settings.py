@@ -92,12 +92,13 @@ class MyFormatter(logging.Formatter):
             filename = caller[-1]
             record.location = f"{filename}:{record.lineno}"
         return super().format(record)
+
 # Define the log file path
 LOGGING_DIR = os.path.join(BASE_DIR, 'logs')
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
 
-LOG_FILE = '/app/logs/authorization.log'
+LOG_FILE = 'logs\ReportSystem.log'
 
 # Configure the logging handlers
 LOGGING = {
@@ -111,7 +112,7 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': LOG_FILE,  # Specify the log file path here
             'formatter': 'my_formatter',
@@ -119,7 +120,7 @@ LOGGING = {
     },
     'root': {
         'handlers': ['file'],
-        'level': 'INFO',
+        'level': 'DEBUG',
     },
 }
 # Database
