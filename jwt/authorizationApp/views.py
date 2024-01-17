@@ -119,3 +119,8 @@ class RegisterUserRequest():
         self.password = password
         self.scope = scope
         self.is_superuser = is_superuser
+
+class RegisterUserResponse():
+    def __init__(self,exception,code):
+        self.code = code
+        self.message = exception.exceptionDesc
