@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import CustomUser
+from .classes import AuthorizationException,AuthorizingResponse
 from django.conf import settings
 import jwt
 import logging
